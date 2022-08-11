@@ -1,0 +1,240 @@
+/* Page */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: 'Karla';
+  color: #232323;
+  line-height: 1.5;
+}
+
+/* Nav bar */
+
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Karla';
+}
+
+.home {
+  color: #232323;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+a:hover {
+  color: #f9d67d;
+}
+
+/* Language button */
+
+:lang(en) [data-en] { display: block; } 
+:lang(en) [data-es] { display: none; }
+
+:lang(es) [data-es] { display: block; }
+:lang(es) [data-en] { display: none; }
+
+button {
+  display: flex;
+  position: fixed;
+  top: 25px;
+  left: 20px;
+  height: 30px;
+  width: 30px;
+  border-style: none;
+  cursor: pointer;
+}
+
+#en {
+background-image: url("https://drive.google.com/uc?id=19JamEe-E4qSJIDY52ECjZwxgse9znpU9");
+background-size: 100%;
+}
+
+#es {
+background-image: url("https://drive.google.com/uc?id=1LhO7SfYQOZTpVlikVd-hA7meUxhQyVk1");
+background-size: 100%;
+}
+
+#en:hover {
+  background-image: url("https://drive.google.com/uc?id=1LhO7SfYQOZTpVlikVd-hA7meUxhQyVk1");
+  transition: all 0.1s ease-out;
+}
+
+#es:hover {
+  background-image: url("https://drive.google.com/uc?id=19JamEe-E4qSJIDY52ECjZwxgse9znpU9");
+  transition: all 0.5s ease-out;
+}
+
+/* Grid layout */
+
+.grid {
+  margin-top: 40px;
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr); 
+  grid-column-gap: 0px; 
+  grid-row-gap: 50px; 
+  padding: 80px; 
+  max-width: 1000px; 
+}
+  .presentation {
+    font-size: 14px;
+    line-height: 25px;
+  }
+.div1 {
+  grid-area: 1 / 1 / 2 / 4;
+  max-width: 100%;
+  font-size: 18px; 
+  line-height: 0;
+}
+.name-underline {
+  text-decoration: underline;
+  text-decoration-color: tomato;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+.div2 {
+  grid-area: 2 / 1 / 3 / 3;
+  max-width: 100%;
+  font-weight: 400;
+  font-size: 16px; 
+  font-height: 27px;
+}
+.div3 {
+  grid-area: 2 / 3 / 3 / 4;
+  max-width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 30px;
+  color: #939393;
+}
+.div4 {
+  grid-area: 3 / 1 / 4 / 4;
+  margin-top: 40px;
+  max-width: 100%;
+}
+.div5 {
+  grid-area: 4 / 1 / 5 / 4;
+  max-width: 100%;
+}
+.div6 {
+  grid-area: 5 / 1 / 6 / 4;
+  max-width: 100%;
+}
+.div7 {
+  grid-area: 6 / 1 / 7 / 4;
+  max-width: 100%;
+  font-weight: 400;
+  font-size: 16px; 
+  padding-bottom: 80px;
+}
+
+.image {
+  max-width: 100%;
+}
+
+.cta {
+  background-color: none;
+  border: 2px solid;
+  border-color: #232323;
+  color: #232323;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 7px 13px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cta:hover {
+  background-color: #232323;
+  color: #f9d67d;
+  transition: all 0.3s ease;
+}
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  
+  .grid {
+    grid-column-gap: 20px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 15px;
+    padding: 50px;
+    height: auto;
+  }
+  .mobile-margins {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .home {
+    font-size: 16px;
+  }
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  max-height: 50px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 0px;
+  }
+  .div2 {
+    font-size: 14px;
+  }
+.div2 {
+  grid-area: 2 / 1 / 3 / 2;
+  margin-bottom: 25px; 
+  }
+.div3 {
+  grid-area: 3 / 1 / 4 / 3;
+  display: flex;
+  justify-content:  flex-start;
+  margin-left: 0px;
+  font-size: 14px;
+  }
+.div4 {
+  grid-area: 4 / 1 / 5 / 2;
+  }
+.div5 {
+  grid-area: 5 / 1 / 6 / 2;
+  }
+.div6 {
+  grid-area: 6 / 1 / 7 / 2;
+  }
+.div7 {
+  grid-area: 7 / 1 / 8 / 2;
+  }
+.div8 { 
+  grid-area: 8 / 1 / 9 / 2;
+  }
+.div9 { 
+  grid-area: 9 / 1 / 10 / 2;
+  }
+.div10 {
+  grid-area: 10 / 1 / 11 / 2;
+  }
+}
